@@ -10,15 +10,18 @@ namespace FizzBuzzApp.Services.Models
         public T Value { get; }
         public ResultCode ResultCode { get; }
 
+        public string Message { get; }
+
         public Result(T value)
         {
             Value = value;
             ResultCode = ResultCode.Ok;
         }
 
-        public Result(ResultCode resultCode)
+        public Result(ResultCode resultCode, string message)
         {
             ResultCode = resultCode;
+            Message = message;
         }
     }
 }
