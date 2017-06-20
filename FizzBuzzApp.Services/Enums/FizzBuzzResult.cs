@@ -1,8 +1,9 @@
 ﻿namespace FizzBuzzApp.Services.Enums
 {
-    enum FizzBuzzResult
+    public enum FizzBuzzResult
     {
         Fizz,
-        Buzz
+        Buzz,
+        None
     }
 }

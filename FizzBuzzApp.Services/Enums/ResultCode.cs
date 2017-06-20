@@ -1,6 +1,6 @@
 ﻿namespace FizzBuzzApp.Services.Enums
 {
-    enum ResultCode
+    public enum ResultCode
     {
         Ok,
         Error
