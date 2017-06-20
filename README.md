@@ -5,7 +5,7 @@ Run it via visual studio or using Docker with the following commands from the ro
 ```
 dotnet restore
 
-dotner publish
+dotnet publish
 
 docker build -t fizzbuzzapp .
 
