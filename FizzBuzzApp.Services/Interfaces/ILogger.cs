@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FizzBuzzApp.Services.Interfaces
 {
-    public interface ILogger
+    public interface IApplicationLogger
     {
         void Log(string message);
         void Log(Exception ex, string message = null);

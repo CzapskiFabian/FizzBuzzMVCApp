@@ -6,7 +6,7 @@ using FizzBuzzApp.Services.Interfaces;
 namespace FizzBuzzApp.Services.Logging
 {
     // TODO: Out of scope for this exercise
-    public class ApplicationLogger : ILogger
+    public class ApplicationLogger : IApplicationLogger
     {
         public void Log(string message)
         {

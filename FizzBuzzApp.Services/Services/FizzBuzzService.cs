@@ -9,8 +9,8 @@ namespace FizzBuzzApp.Services.Services
 {
     public class FizzBuzzService : IFizzBuzzService
     {
-        private ILogger _logger;
-        public FizzBuzzService(ILogger logger)
+        private IApplicationLogger _logger;
+        public FizzBuzzService(IApplicationLogger logger)
         {
             _logger = logger;
         }

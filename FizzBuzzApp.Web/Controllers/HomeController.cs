@@ -32,7 +32,15 @@ namespace FizzBuzzApp.Web.Controllers
             }
             var result = _fizzBuzzService.GetFizzBuzz(model.Input);
 
-            model.Result = result.Value;
+            if (result.ResultCode != ResultCode.Ok)
+            {
+                ModelState.AddModelError("", result.Message);
+            }
+            else
+            {
+                model.Result = result.Value;
+            }
+
 
             return View(model);
         }
