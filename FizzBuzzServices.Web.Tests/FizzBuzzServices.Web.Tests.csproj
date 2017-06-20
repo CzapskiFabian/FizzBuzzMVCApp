@@ -9,6 +9,13 @@
     <PackageReference Include="Moq" Version="4.7.49" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.1.11" />
     <PackageReference Include="MSTest.TestFramework" Version="1.1.11" />
+    <PackageReference Include="NUnit" Version="3.7.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.8.0-alpha1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FizzBuzzApp.Services\FizzBuzzApp.Services.csproj" />
+    <ProjectReference Include="..\FizzBuzzApp.Web\FizzBuzzApp.Web.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -11,15 +11,14 @@ namespace FizzBuzzApp.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private IFizzBuzzService _fizzBuzzService;
+        private readonly IFizzBuzzService _fizzBuzzService;
         public HomeController(IFizzBuzzService fizzBuzzService)
         {
             _fizzBuzzService = fizzBuzzService;
         }
         public IActionResult Index()
         {
-            var view = new FizzBuzzViewModel() {Input = 1};
-            return View(view);
+            return View(new FizzBuzzViewModel());
         }
 
         [HttpPost]
