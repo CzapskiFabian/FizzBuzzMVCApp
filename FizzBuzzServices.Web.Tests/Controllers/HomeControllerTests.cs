@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using FizzBuzzApp.Services.Enums;
 using FizzBuzzApp.Services.Interfaces;
 using FizzBuzzApp.Services.Models;
 using FizzBuzzApp.Web.Controllers;
@@ -14,7 +15,7 @@ namespace FizzBuzzServices.Web.Tests.Controllers
     [TestFixture]
     public class HomeControllerTests
     {
-        private Mock<IFizzBuzzService> _fizzBuzzServiceMock = new Mock<IFizzBuzzService>();
+        private readonly Mock<IFizzBuzzService> _fizzBuzzServiceMock = new Mock<IFizzBuzzService>();
 
         private HomeController _homeController;
         [SetUp]
@@ -47,6 +48,21 @@ namespace FizzBuzzServices.Web.Tests.Controllers
             // assert
             Assert.IsInstanceOf<FizzBuzzViewModel>(result.Model);
             Assert.AreEqual("Fizz", ((FizzBuzzViewModel)result.Model).Result);
+        }
+
+        [Test]
+        public void IndexPostReturnsViewWithErrorsOnServiceError()
+        {
+            // arrange 
+            var model = new FizzBuzzViewModel();
+            _fizzBuzzServiceMock.Setup(x => x.GetFizzBuzz(It.IsAny<int>())).Returns(new Result<string>(ResultCode.Error, "Error Message"));
+
+            // act
+            _homeController.Index(model);
+
+            // assert
+            Assert.IsTrue(_homeController.ViewData.ModelState.Count == 1,
+                 "Error Message");
         }
     }
 }

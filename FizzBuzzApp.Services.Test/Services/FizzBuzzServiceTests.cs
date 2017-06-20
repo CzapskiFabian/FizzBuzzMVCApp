@@ -1,6 +1,8 @@
 ﻿using FizzBuzzApp.Services.Enums;
+using FizzBuzzApp.Services.Interfaces;
 using FizzBuzzApp.Services.Models;
 using FizzBuzzApp.Services.Services;
+using Moq;
 using NUnit.Framework;
 
 
@@ -35,7 +37,8 @@ namespace FizzBuzzApp.Services.Test.Services
         public void GetFizzBuzzReturnsCorrentlyOnInput(int testvalue, string expectedResult)
         {
             // arrange
-            FizzBuzzService sut = new FizzBuzzService();
+            Mock<IApplicationLogger> loggerMock = new Mock<IApplicationLogger>();
+            FizzBuzzService sut = new FizzBuzzService(loggerMock.Object);
 
             // act
             var result = sut.GetFizzBuzz(testvalue);
