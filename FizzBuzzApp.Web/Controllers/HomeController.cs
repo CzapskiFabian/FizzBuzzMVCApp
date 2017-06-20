@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FizzBuzzApp.Services.Enums;
 using FizzBuzzApp.Services.Interfaces;
 using FizzBuzzApp.Services.Services;
 using FizzBuzzApp.Web.ViewModels;
@@ -30,6 +31,7 @@ namespace FizzBuzzApp.Web.Controllers
                 return View(model);
             }
             var result = _fizzBuzzService.GetFizzBuzz(model.Input);
+
             model.Result = result.Value;
 
             return View(model);
