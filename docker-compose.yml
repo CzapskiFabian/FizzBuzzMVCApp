@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  fizzbuzzapp:
+    image: fizzbuzzapp
+    build:
+      context: .
+      dockerfile: Dockerfile

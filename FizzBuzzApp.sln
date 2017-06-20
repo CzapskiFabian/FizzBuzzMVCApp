@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzApp.Services", "FizzBuzzApp.Services\FizzBuzzApp.Services.csproj", "{6CC8E201-3811-4C69-BE76-78057F439787}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{BAE5B69C-6AA1-4690-BA1F-DEBB919D1BA4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "spec", "spec", "{A8199966-B648-41F5-A860-D1D10B744A69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzApp.Services.Test", "FizzBuzzApp.Services.Test\FizzBuzzApp.Services.Test.csproj", "{50B0377D-B3BA-4FAD-8BCC-822E743B4284}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzServices.Web.Tests", "FizzBuzzServices.Web.Tests\FizzBuzzServices.Web.Tests.csproj", "{877B83BF-7463-4692-8AD5-D520C7313E09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzApp.Web", "FizzBuzzApp.Web\FizzBuzzApp.Web.csproj", "{093A5DD1-F4DE-4789-BC50-48E16C92E5B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CC8E201-3811-4C69-BE76-78057F439787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CC8E201-3811-4C69-BE76-78057F439787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CC8E201-3811-4C69-BE76-78057F439787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CC8E201-3811-4C69-BE76-78057F439787}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50B0377D-B3BA-4FAD-8BCC-822E743B4284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B0377D-B3BA-4FAD-8BCC-822E743B4284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B0377D-B3BA-4FAD-8BCC-822E743B4284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B0377D-B3BA-4FAD-8BCC-822E743B4284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{877B83BF-7463-4692-8AD5-D520C7313E09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{877B83BF-7463-4692-8AD5-D520C7313E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{877B83BF-7463-4692-8AD5-D520C7313E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{877B83BF-7463-4692-8AD5-D520C7313E09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{093A5DD1-F4DE-4789-BC50-48E16C92E5B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{093A5DD1-F4DE-4789-BC50-48E16C92E5B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{093A5DD1-F4DE-4789-BC50-48E16C92E5B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{093A5DD1-F4DE-4789-BC50-48E16C92E5B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6CC8E201-3811-4C69-BE76-78057F439787} = {BAE5B69C-6AA1-4690-BA1F-DEBB919D1BA4}
+		{50B0377D-B3BA-4FAD-8BCC-822E743B4284} = {A8199966-B648-41F5-A860-D1D10B744A69}
+		{877B83BF-7463-4692-8AD5-D520C7313E09} = {A8199966-B648-41F5-A860-D1D10B744A69}
+		{093A5DD1-F4DE-4789-BC50-48E16C92E5B9} = {BAE5B69C-6AA1-4690-BA1F-DEBB919D1BA4}
+	EndGlobalSection
+EndGlobal
