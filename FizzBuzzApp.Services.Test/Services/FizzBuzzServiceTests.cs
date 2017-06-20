@@ -28,7 +28,7 @@ namespace FizzBuzzApp.Services.Test.Services
         [TestCase(1, FizzBuzzResult.None)]
         [TestCase(2, FizzBuzzResult.None)]
         [TestCase(0, FizzBuzzResult.None)]
-        [TestCase(987, FizzBuzzResult.None)]
+        [TestCase(986, FizzBuzzResult.None)]
         [TestCase(-13, FizzBuzzResult.None)]
         [TestCase(1001, FizzBuzzResult.None)]
         [TestCase(-1001, FizzBuzzResult.None)]
