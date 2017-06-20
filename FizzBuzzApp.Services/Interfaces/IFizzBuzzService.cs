@@ -8,6 +8,6 @@ namespace FizzBuzzApp.Services.Interfaces
 {
     public interface IFizzBuzzService
     {
-        Result<FizzBuzzResult> GetFizzBuzz(int input);
+        Result<string> GetFizzBuzz(int input);
     }
 }

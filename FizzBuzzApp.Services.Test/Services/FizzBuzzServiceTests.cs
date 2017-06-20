@@ -10,29 +10,29 @@ namespace FizzBuzzApp.Services.Test.Services
     public class FizzBuzzServiceTests 
     {
         [Test]
-        [TestCase(-300, FizzBuzzResult.Fizz)]
-        [TestCase(-90, FizzBuzzResult.Fizz)]
-        [TestCase(-6, FizzBuzzResult.Fizz)]
-        [TestCase(-3, FizzBuzzResult.Fizz)]
-        [TestCase(3, FizzBuzzResult.Fizz)]
-        [TestCase(9, FizzBuzzResult.Fizz)]
-        [TestCase(12, FizzBuzzResult.Fizz)]
+        [TestCase(-300, "Fizz")]
+        [TestCase(-90, "Fizz")]
+        [TestCase(-6, "Fizz")]
+        [TestCase(-3, "Fizz")]
+        [TestCase(3, "Fizz")]
+        [TestCase(9, "Fizz")]
+        [TestCase(12, "Fizz")]
 
-        [TestCase(-50, FizzBuzzResult.Buzz)]
-        [TestCase(-5, FizzBuzzResult.Buzz)]
-        [TestCase(5, FizzBuzzResult.Buzz)]
-        [TestCase(10, FizzBuzzResult.Buzz)]
-        [TestCase(100, FizzBuzzResult.Buzz)]
-        [TestCase(5000, FizzBuzzResult.Buzz)]
+        [TestCase(-50, "Buzz")]
+        [TestCase(-5, "Buzz")]
+        [TestCase(5, "Buzz")]
+        [TestCase(10, "Buzz")]
+        [TestCase(100, "Buzz")]
+        [TestCase(5000, "Buzz")]
 
-        [TestCase(1, FizzBuzzResult.None)]
-        [TestCase(2, FizzBuzzResult.None)]
-        [TestCase(0, FizzBuzzResult.None)]
-        [TestCase(986, FizzBuzzResult.None)]
-        [TestCase(-13, FizzBuzzResult.None)]
-        [TestCase(1001, FizzBuzzResult.None)]
-        [TestCase(-1001, FizzBuzzResult.None)]
-        public void GetFizzBuzzReturnsCorrentlyOnInput(int testvalue, FizzBuzzResult expectedResult)
+        [TestCase(1, "")]
+        [TestCase(2, "")]
+        [TestCase(0, "")]
+        [TestCase(986, "")]
+        [TestCase(-13, "")]
+        [TestCase(1001, "")]
+        [TestCase(-1001, "")]
+        public void GetFizzBuzzReturnsCorrentlyOnInput(int testvalue, string expectedResult)
         {
             // arrange
             FizzBuzzService sut = new FizzBuzzService();
@@ -41,7 +41,7 @@ namespace FizzBuzzApp.Services.Test.Services
             var result = sut.GetFizzBuzz(testvalue);
 
             // assert
-            Assert.IsInstanceOf<Result<FizzBuzzResult>>(result);
+            Assert.IsInstanceOf<Result<string>>(result);
             Assert.AreEqual(expectedResult, result.Value);
         }
 

@@ -2,34 +2,38 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FizzBuzzApp.Services.Interfaces;
+using FizzBuzzApp.Services.Services;
+using FizzBuzzApp.Web.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FizzBuzzApp.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private IFizzBuzzService _fizzBuzzService;
+        public HomeController(IFizzBuzzService fizzBuzzService)
+        {
+            _fizzBuzzService = fizzBuzzService;
+        }
         public IActionResult Index()
         {
-            return View();
+            var view = new FizzBuzzViewModel() {Input = 1};
+            return View(view);
         }
 
-        public IActionResult About()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Index(FizzBuzzViewModel model)
         {
-            ViewData["Message"] = "Your application description page.";
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var result = _fizzBuzzService.GetFizzBuzz(model.Input);
+            model.Result = result.Value;
 
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Error()
-        {
-            return View();
+            return View(model);
         }
     }
 }

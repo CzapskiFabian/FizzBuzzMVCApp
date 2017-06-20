@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FizzBuzzApp.Services.Interfaces;
+using FizzBuzzApp.Services.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -29,6 +31,8 @@ namespace FizzBuzzApp.Web
         {
             // Add framework services.
             services.AddMvc();
+
+            services.AddTransient<IFizzBuzzService, FizzBuzzService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

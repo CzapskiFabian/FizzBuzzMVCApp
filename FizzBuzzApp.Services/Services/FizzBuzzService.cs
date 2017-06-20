@@ -9,21 +9,25 @@ namespace FizzBuzzApp.Services.Services
 {
     public class FizzBuzzService : IFizzBuzzService
     {
-        public Result<FizzBuzzResult> GetFizzBuzz(int input)
+        public FizzBuzzService()
+        {
+        }
+
+        public Result<string> GetFizzBuzz(int input)
         {
             if (input != 0)
             {
                 if (input % 3 == 0)
                 {
-                    return new Result<FizzBuzzResult>(FizzBuzzResult.Fizz);
+                    return new Result<string>("Fizz");
                 }
                 if (input % 5 == 0)
                 {
-                    return new Result<FizzBuzzResult>(FizzBuzzResult.Buzz);
+                    return new Result<string>("Buzz");
 
                 }
             }
-            return new Result<FizzBuzzResult>(FizzBuzzResult.None);
+            return new Result<string>("");
 
         }
     }
